@@ -1,0 +1,67 @@
+{
+  "name": "azure-cosmos-ui",
+  "version": "1.0.0",
+  "description": "UI for Cosmos DB",
+  "main": "./out/main/index.js",
+  "repository": "git@github.com:stockulus/azure-cosmos-ui.git",
+  "homepage": "https://github.com/stockulus/azure-cosmos-ui",
+  "author": {
+    "email": "stockulus@icloud.com",
+    "name": "Christoph Stock",
+    "url": "https://github.com/stockulus/"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "eslint-config-react-stockulus"
+  },
+  "eslintIgnore": [
+    "dist",
+    "node_modules",
+    "out"
+  ],
+  "scripts": {
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "yarn run typecheck && yarn run lint && electron-vite build",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
+    "lint:fix": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "updtr": "yarn upgrade-interactive --latest",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "yarn run typecheck:node && yarn run typecheck:web",
+    "postinstall": "electron-builder install-app-deps",
+    "build:win": "yarn run build && electron-builder --win --config",
+    "build:mac": "electron-vite build && electron-builder --mac --config",
+    "build:linux": "electron-vite build && electron-builder --linux --config",
+    "preversion": "yarn lint && yarn typecheck",
+    "version:patch": "yarn version --patch",
+    "version:minor": "yarn version --minor",
+    "version:major": "yarn version --major",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^2.0.0",
+    "@electron-toolkit/utils": "^2.0.0",
+    "electron-updater": "^6.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@electron/notarize": "^2.1.0",
+    "@types/node": "^20.4.4",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "autoprefixer": "^10.4.14",
+    "electron": "^25.3.1",
+    "electron-builder": "^24.4.0",
+    "electron-vite": "^1.0.25",
+    "eslint": "^8.44.0",
+    "eslint-config-react-stockulus": "^1.0.0",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.2"
+  }
+}
