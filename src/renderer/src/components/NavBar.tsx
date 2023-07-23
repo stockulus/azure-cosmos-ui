@@ -1,3 +1,4 @@
+import { PlusIcon } from '@heroicons/react/20/solid'
 import {
   CalendarIcon,
   ChartPieIcon,
@@ -22,8 +23,16 @@ const navigation = [
 export function NavBar() {
   return (
     <div className="fixed inset-y-0 z-50 flex w-72 lg:flex-col">
-      <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-4">
-        <nav className="mt-4 flex flex-1 flex-col">
+      <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-8">
+        <div className="mt-4">
+          <button
+            className="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            type="button">
+            <PlusIcon aria-hidden="true" className="h-5 w-5" />
+            <span className="sr-only">Add</span>
+          </button>
+        </div>
+        <nav className="flex flex-1 flex-col">
           <ul className="flex flex-1 flex-col gap-y-7">
             <li>
               <ul className="-mx-2 space-y-1">
