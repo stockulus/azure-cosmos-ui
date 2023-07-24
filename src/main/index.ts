@@ -1,9 +1,11 @@
 import { join } from 'path'
 
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
-import { app, shell, BrowserWindow, ipcMain, safeStorage } from 'electron'
+import { app, shell, BrowserWindow, ipcMain } from 'electron'
 
 import icon from '../../resources/icon.png?asset'
+
+import { decryptString, encryptString } from './security'
 
 function createWindow() {
   // Create the browser window.
@@ -28,7 +30,7 @@ function createWindow() {
     if (args.length !== 2)
       throw new Error('encryptString only accept one argument')
 
-    return Buffer.from(safeStorage.encryptString(args[1])).toString('base64')
+    return encryptString(args[1])
   })
 
   ipcMain.handle('decryptString', (...args: any[]) => {
@@ -36,7 +38,7 @@ function createWindow() {
     if (args.length !== 2)
       throw new Error('decryptString only accept one argument')
 
-    return safeStorage.decryptString(Buffer.from(args[1], 'base64'))
+    return decryptString(args[1])
   })
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
