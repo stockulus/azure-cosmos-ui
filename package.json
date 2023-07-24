@@ -40,6 +40,7 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
+    "@azure/cosmos": "^3.17.3",
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.0",
     "@headlessui/react": "^1.7.15",
