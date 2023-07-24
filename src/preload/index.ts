@@ -6,8 +6,8 @@ const api = {
   encryptString: (string: string) => {
     return ipcRenderer.invoke('encryptString', string)
   },
-  decryptString: (string: string) => {
-    return ipcRenderer.invoke('decryptString', string)
+  getDbInfo: (string: string) => {
+    return ipcRenderer.invoke('getDbInfo', string)
   }
 }
 
