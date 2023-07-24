@@ -5,7 +5,7 @@ import { app, shell, BrowserWindow, ipcMain, safeStorage } from 'electron'
 
 import icon from '../../resources/icon.png?asset'
 
-function createWindow(): void {
+function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 900,

@@ -4,10 +4,10 @@ import { contextBridge, ipcRenderer } from 'electron'
 // Custom APIs for renderer
 const api = {
   encryptString: (string: string) => {
-    return ipcRenderer.invoke('encryptString', string) as Promise<string>
+    return ipcRenderer.invoke('encryptString', string)
   },
   decryptString: (string: string) => {
-    return ipcRenderer.invoke('decryptString', string) as Promise<string>
+    return ipcRenderer.invoke('decryptString', string)
   }
 }
 
