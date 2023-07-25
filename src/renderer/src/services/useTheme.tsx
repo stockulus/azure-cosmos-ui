@@ -14,7 +14,7 @@ const themeContext = createContext<ThemeContext>({
 
 themeContext.displayName = 'ThemeContext'
 
-export const useTheme = () => {
+export function useTheme() {
   const { theme, setTheme } = useContext(themeContext)
 
   return { theme, setTheme }
@@ -26,7 +26,7 @@ const getBrowserPreferences = () => {
   return 'light'
 }
 
-export const ThemeProvider = ({ children }: { children: ReactNode }) => {
+export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useLocalStorage('theme', getBrowserPreferences())
 
   useLayoutEffect(() => {

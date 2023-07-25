@@ -8,8 +8,9 @@ import {
   HomeIcon,
   UsersIcon
 } from '@heroicons/react/24/outline'
+import { useLocalization } from '@renderer/services'
 
-import { classNames } from './classNames'
+import { classNames } from '../components'
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -21,6 +22,8 @@ const navigation = [
 ]
 
 export function NavBar() {
+  const { t } = useLocalization()
+
   return (
     <div className="fixed inset-y-0 z-50 flex w-72 lg:flex-col">
       <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6 pb-8">
@@ -64,7 +67,7 @@ export function NavBar() {
                   aria-hidden="true"
                   className="h-6 w-6 shrink-0"
                 />
-                Settings
+                {t('Settings')}
               </a>
             </li>
           </ul>
