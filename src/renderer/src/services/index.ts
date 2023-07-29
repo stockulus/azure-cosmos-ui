@@ -1,3 +1,4 @@
+export { useConnections, ConnectionsProvider } from './useConnections'
 export { useLocalization, LocalizationProvider } from './useLocalization'
 export { useLocalStorage } from './useLocalStorage'
 export { useSessionStorage } from './useSessionStorage'
