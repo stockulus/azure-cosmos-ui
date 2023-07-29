@@ -1,4 +1,5 @@
 export { useConnections, ConnectionsProvider } from './useConnections'
+export { useDbInfo } from './useDbInfo'
 export { useLocalization, LocalizationProvider } from './useLocalization'
 export { useLocalStorage } from './useLocalStorage'
 export { useSessionStorage } from './useSessionStorage'

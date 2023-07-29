@@ -30,10 +30,12 @@ export function ConnectionsProvider({ children }: { children: ReactNode }) {
   )
 
   const addConnection = useCallback(
-    (connection: string) => {
+    async (connection: string) => {
+      const encryptedConnection = await window.api.encryptString(connection)
+
       setConnections((previousConnections) => [
         ...previousConnections,
-        connection
+        encryptedConnection
       ])
     },
     [setConnections]
