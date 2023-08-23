@@ -1,8 +1,6 @@
 export const texts = {
-  Add: {
-    de: 'Hinzufügen'
-  },
-  Settings: {
-    de: 'Einstellungen'
-  }
+  Add: { de: 'Hinzufügen' },
+  Cancel: { de: 'Abbrechen' },
+  'Connection string': { de: 'Verbindungszeichenkette' },
+  Settings: { de: 'Einstellungen' }
 } as const
