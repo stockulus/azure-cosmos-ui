@@ -24,32 +24,11 @@
 @tailwind utilities;
 
 @layer base {
-
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
-}
-
-/* Tiny MCE Editor */
-.dark div.tox>.tox-editor-container,
-.dark div.tox-editor-container>div.tox-editor-header,
-.dark div.tox-editor-container>div.tox-editor-header>*,
-.dark div.tox-editor-container>div.tox-editor-header>.tox-toolbar-overlord>* {
-  background-color: theme('colors.gray.100') !important;
-}
-
-.dark .tox .tox-edit-area>iframe.tox-edit-area__iframe {
-  border-color: theme('colors.gray.200') !important;
-}
-
-.tox-editor-header>.tox-menubar>button:first-child {
-  display: none !important;
-}
-
-.tox-statusbar {
-  display: none !important;
 }
 
 @supports (-webkit-touch-callout: none) {
