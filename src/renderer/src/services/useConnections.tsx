@@ -41,9 +41,9 @@ export function ConnectionsProvider({ children }: { children: ReactNode }) {
     [setConnections]
   )
   const removeConnection = useCallback(
-    (connection: string) => {
+    (encryptedConnection: string) => {
       setConnections((previousConnections) =>
-        previousConnections.filter((c) => c !== connection)
+        previousConnections.filter((c) => c !== encryptedConnection)
       )
     },
     [setConnections]
