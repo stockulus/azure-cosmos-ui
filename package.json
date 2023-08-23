@@ -40,28 +40,34 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
+    "@azure/cosmos": "^3.17.3",
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.0",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@tailwindcss/forms": "^0.5.5",
     "electron-updater": "^6.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@electron-toolkit/tsconfig": "^1.0.1",
     "@electron/notarize": "^2.1.0",
-    "@types/node": "^20.4.4",
-    "@types/react": "^18.2.14",
+    "@types/node": "^20.5.3",
+    "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "autoprefixer": "^10.4.14",
-    "electron": "^25.3.1",
-    "electron-builder": "^24.4.0",
-    "electron-vite": "^1.0.25",
-    "eslint": "^8.44.0",
-    "eslint-config-react-stockulus": "^1.0.0",
-    "postcss": "^8.4.27",
+    "autoprefixer": "^10.4.15",
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.3",
+    "electron-vite": "^1.0.27",
+    "eslint": "^8.47.0",
+    "eslint-config-react-stockulus": "^1.0.1",
+    "postcss": "^8.4.28",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6",
-    "vite": "^4.4.2"
+    "vite": "^4.4.9"
   }
 }
