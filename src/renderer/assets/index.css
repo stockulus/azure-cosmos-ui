@@ -1,18 +1,4 @@
 @font-face {
-  font-family: NotoSansUI;
-  font-style: normal;
-  font-weight: 400;
-  src: url(/assets/fonts/NotoSans-Regular.ttf);
-}
-
-@font-face {
-  font-family: NotoSansUI;
-  font-style: italic;
-  font-weight: 400;
-  src: url(/assets/fonts/NotoSans-Italic.ttf);
-}
-
-@font-face {
   font-family: JetBrainsMono;
   font-style: normal;
   font-weight: 400;

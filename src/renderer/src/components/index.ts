@@ -1,5 +1,4 @@
 export { classNames } from './classNames'
 export { Dialog } from './Dialog'
-export { PrimaryButton } from './PrimaryButton'
-export { SecondaryButton } from './SecondaryButton'
+export { PrimaryButton, RoundedButton, SecondaryButton } from './Buttons'
 export { Spinner } from './Spinner'
