@@ -33,8 +33,6 @@ export function ConnectionsProvider({ children }: { children: ReactNode }) {
     async (connection: string) => {
       const encryptedConnection = await window.api.encryptString(connection)
 
-      console.log('After service', encryptedConnection)
-
       setConnections((previousConnections) => [
         ...previousConnections,
         encryptedConnection
